@@ -7,12 +7,19 @@ module ErrorsModule
     puts 'Error:'.red + 'on' + "line:[:#{char_index}:]".yellow. + ' Unexpected space before semicolon ";" '
   end
 
-  def indentation(char, char_index)
+  def indentation?(char, char_index)
     return true if str.match?(/^(\s{2})+([a-zA-Z0-9\-_]+)/)
 
-    puts 'Error'.red + ' on' + " line:[:#{char_indx}:]".yellow + ' Expecting indentation to be two spaced  '
+    puts 'Error'.red + ' on' + " line:[:#{char_indx}:]".yellow + ' Expecting indentation to be two spaced'
   end
 
+  def trailing_white_space?(char, char_index)
+    if !char.match?(/(?<=\S)[\t ]+$/) || char.match?(/^\n$/)
+      true
+    else
+      puts 'Error'.red + ' on' + " line:[:#{data_index}:]".yellow + 'Unexpected white space'
+    end
+  end
 
 
 end
