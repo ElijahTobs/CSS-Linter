@@ -17,7 +17,15 @@ module ErrorsModule
     if !char.match?(/(?<=\S)[\t ]+$/) || char.match?(/^\n$/)
       true
     else
-      puts 'Error'.red + ' on' + " line:[:#{data_index}:]".yellow + 'Unexpected white space'
+      puts 'Error'.red + ' on' + " line:[:#{data_index}:]".yellow + ' Unexpected white space'
+    end
+  end
+
+  def ending_semicolon?(char, char_index)
+    if char.match?(/(;.*)$/) || char.match?(/({|})/) || char.match?(/^\n$/)
+      true
+    else
+      puts 'Error'.red + ' on' + " line:[:#{char_index}:]".yellow + ' Missing ending semicolon ";" '
     end
   end
 
