@@ -7,7 +7,7 @@ module ErrorsModule
     puts 'Error'.red + ' on' + " line:[:#{chars_index}:]".yellow + ' Unexpected space before semicolon ";"'
   end
 
-  def indentation?(_chars, chars_index)
+  def indentation?(chars, chars_index)
     return true if chars.match?(/^(\s{2})+([a-zA-Z0-9\-_]+)/)
 
     puts 'Error'.red + ' on' + " line:[:#{chars_index}:]".yellow + ' Expecting indentation to be two spaced'
