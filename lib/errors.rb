@@ -29,5 +29,10 @@ module ErrorsModule
     end
   end
 
+  def space_before_colon?(char, char_index)
+    return true unless char.match?(/( :)/)
+
+    puts 'Error'.red + ' on' + " line:[:#{char_index}:]".yellow + 'Unexpexted space before colon " :" '
+  end
 
 end
