@@ -11,12 +11,14 @@ module ErrorsChecker
   def inspect
     counter = 0
     chars_array.each_with_index do |chars, index|
-      space_before_semicolon?(chars, chars_index + 1)
-      indentation?(chars, chars_index + 1)
-      trailing_white_space?(chars, chars_index + 1)
-      ending_semicolon?(chars, chars_index + 1)
-      space_before_colon?(chars, chars_index + 1)
-      space_after_colon?(chars, chars_index + 1)
+      chars_index = index + 1
+
+      space_before_semicolon?(chars, chars_index)
+      indentation?(chars, chars_index)
+      trailing_white_space?(chars, chars_index)
+      ending_semicolon?(chars, chars_index)
+      space_before_colon?(chars, chars_index)
+      space_after_colon?(chars, chars_index)
     end
     puts "File Check Complete!".green
     true
