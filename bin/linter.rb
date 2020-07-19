@@ -17,6 +17,5 @@ user_file = File.open(file_path)
 file_data = user_file.readlines
 checks = ErrorsChecker.new(file_data)
 checks.inspect
-
-
-puts 'Scan Complete!'.green.hide
+puts
+puts 'Scan Complete!'.green
