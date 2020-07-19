@@ -9,19 +9,18 @@ module ErrorsChecker
   end
 
   def inspect
-    counter = 0
+    errors = 0
     chars_array.each_with_index do |chars, index|
       chars_index = index + 1
 
-      space_before_semicolon?(chars, chars_index)
-      indentation?(chars, chars_index)
-      trailing_white_space?(chars, chars_index)
-      ending_semicolon?(chars, chars_index)
-      space_before_colon?(chars, chars_index)
-      space_after_colon?(chars, chars_index)
+      errors += 1 unless space_before_semicolon?(chars, chars_index)
+      errors += 1 unless indentation?(chars, chars_index)
+      errors += 1 unless trailing_white_space?(chars, chars_index)
+      errors += 1 unless ending_semicolon?(chars, chars_index)
+      errors += 1 unless space_before_colon?(chars, chars_index)
+      errors += 1 unless space_after_colon?(chars, chars_index)
     end
-    puts "File Check Complete!".green
-    true
+    puts 'No Errors Found'.green if errors.zero?
   end
 
 

@@ -2,19 +2,17 @@ require 'rainbow/refinement'
 using Rainbow
 # require_relative 'errors_checker.rb'
 
-puts '----------------------------'.blue
-puts
-puts '|| Welcome to CSS Linter! ||'.green.bright.underline
-puts
-puts '----------------------------'.blue
+puts '----------------------------'.green.bright
+puts '|                          |'.green.bright
+puts '|'.green.bright + '  Welcome to CSS Linter! '.yellow.bright + ' |'.green.bright
+puts '|                          |'.green.bright
+puts '----------------------------'.green.bright
 sleep(1)
 puts
-puts 'Scanning to detect possible errors...'
-puts
+puts 'Scanning to detect possible errors...'.cyan
 sleep(3)
 
-file_path = ARGV
 
 
 
-puts 'Scanning Complete!'.green.hide
+puts 'Scan Complete!'.green.hide
