@@ -1,6 +1,6 @@
 require_relative 'errors.rb'
 
-module ErrorsChecker
+class ErrorsChecker
   include ErrorsModule
   attr_reader :chars_array
 
@@ -21,6 +21,8 @@ module ErrorsChecker
       errors += 1 unless space_after_colon?(chars, chars_index)
     end
     puts 'No Errors Found'.green if errors.zero?
+    puts
+    puts 'Fix Errors!'.red
   end
 
 
