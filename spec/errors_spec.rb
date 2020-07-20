@@ -1,6 +1,6 @@
 require_relative '../lib/errors.rb'
 
-RSpec.describe ErrorsModule do
+describe ErrorsModule do
   include ErrorsModule
   let(:chars_index) { 1 }
   let(:correct_format) { '  font-size: 16px;' } 
