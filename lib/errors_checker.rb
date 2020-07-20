@@ -29,16 +29,3 @@ class ErrorsChecker
   # rubocop: enable Metrics/PerceivedComplexity
   # rubocop: enable Metrics/CyclomaticComplexity
 end
-
-# arr = [2,4,3,1,7,5,9]
-# require 'colorize'
-
-# def test(num)
-#   unless num.even?
-#     "Number is odd".cyan
-#   else
-#     "Number is even".green
-#   end
-# end
-
-# puts test(6)
