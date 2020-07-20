@@ -23,10 +23,14 @@ This CSS linter currently scans for the following errors/warnings.
 > Below are images of 2 .css files. One passed the tests and the other failed
 
 >> Failed Test
+
+
 ![screenshot](./images/fail_test.PNG)
 ![screenshot](./images/errors.PNG)
 
 >> Passed Test
+
+
 ![screenshot](./images/pass_test.PNG)
 ![screenshot](./images/no_errors.PNG)
 
