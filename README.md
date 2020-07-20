@@ -25,8 +25,8 @@ This CSS linter currently scans for the following errors/warnings.
 >> Failed Test
 
 
-![screenshot](./images/fail_test.PNG)
 ![screenshot](./images/errors.PNG)
+![screenshot](./images/fail_test.PNG)
 
 >> Passed Test
 
