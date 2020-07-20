@@ -52,5 +52,16 @@ RSpec.describe ErrorsModule do
     
   end
   
+  describe "#space_before_colon?" do
+    let(:wrong_format) { 'font-size : 16px;' } 
+    it "returns true if no space found before colon" do
+      expect(space_before_colon?(correct_format, chars_index)).to eql(true)
+    end
+
+    it "returns error message if space found before colon" do
+      expect{space_before_colon?(wrong_format, chars_index)}.to output(String).to_stdout
+    end
+  end
+  
 
 end
