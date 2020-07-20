@@ -22,7 +22,7 @@ class ErrorsChecker
     end
     puts 'No Errors Found'.green if errors.zero?
     puts
-    puts 'Fix Errors!'.red
+    puts 'Fix Errors!'.red if !errors.zero?
   end
 
 
