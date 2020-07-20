@@ -2,12 +2,12 @@ p {
   background-color: #eef;
   font-weight: 700;
   border: 1px solid blue;
-padding: 10px 20px;
+padding: 10px 20px;                               /*Indentation error*/
   text-align: center;
 }
 
 article {
-  color : aquamarine;
+  color : aquamarine;                           /*Unexpected space before colon*/
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -16,15 +16,15 @@ article {
 p {
   background-color: #eef;
   font-weight: 700;
-  border:1px solid blue;
-  padding: 10px 20px ;
-  text-align: center;  
+  border:1px solid blue;                        /*Expected space after colon*/
+  padding: 10px 20px ;                            /*Unexpected space before semicolon*/
+  text-align: center;                             /*Unexpected white space*/   
 }
 
 article {
   color: aquamarine;
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
-  display: flex
+  display: flex                                   /*Missing ending semicolon*/
 }
 
