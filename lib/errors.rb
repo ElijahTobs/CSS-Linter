@@ -12,7 +12,6 @@ module ErrorsModule
     return true unless chars.match?(/^\w+\s*-.\w*:/) || chars.match?(/^\w+\s*\w*:/)
 
     puts 'Error'.red + ' on'.blue + " line:[:#{chars_index}:]".yellow + ' Expecting indentation to be two spaced'.blue
-    
   end
 
   def trailing_white_space?(chars, chars_index)

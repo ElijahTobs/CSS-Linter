@@ -8,6 +8,8 @@ class ErrorsChecker
     @chars_array = chars_array
   end
 
+  # rubocop: disable Metrics/PerceivedComplexity
+  # rubocop: disable Metrics/CyclomaticComplexity
   def inspect
     errors = 0
     chars_array.each_with_index do |chars, index|
@@ -22,11 +24,10 @@ class ErrorsChecker
     end
     puts 'No Errors Found'.green if errors.zero?
     puts
-    puts 'Fix Errors!'.red if !errors.zero?
+    puts 'Fix Errors!'.red unless errors.zero?
   end
-
-
-
+  # rubocop: enable Metrics/PerceivedComplexity
+  # rubocop: enable Metrics/CyclomaticComplexity
 end
 
 # arr = [2,4,3,1,7,5,9]
