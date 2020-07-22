@@ -1,5 +1,10 @@
-source 'https://rubygems.org'
+source 'https://rubygems.org' do
+  gem 'rspec'
+  gem 'rainbow'
+  gem 'colorize'
 
-git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-gem 'rspec'
+end
+
+# git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
