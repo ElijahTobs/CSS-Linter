@@ -84,7 +84,6 @@ $ gem install colorize
 ~~~bash
 $ gem install rainbow
 ~~~
-
 # Using The Linter
 
 After you might have cloned the repo and installed the gems, be it manually or by using bundler, since the lint file is located inside the bin folder, on your terminal, you'll run `bin/lint` followed by the file. Using the css file in this repo as an example:
