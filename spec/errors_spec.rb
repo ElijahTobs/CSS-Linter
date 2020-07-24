@@ -6,7 +6,7 @@ describe ErrorsModule do
   let(:correct_format) { '  font-size: 16px;' }
 
   describe '#space_before_semicolon?' do
-    let(:wrong_format) { 'font-size: 16px ;' }
+    let(:wrong_format) { '  font-size: 16px ;' }
     it "returns true if there's no space before semicolon" do
       expect(space_before_semicolon?(correct_format, chars_index)).to eql(true)
     end
@@ -28,7 +28,7 @@ describe ErrorsModule do
   end
 
   describe '#trailing_white_space?' do
-    let(:wrong_format) { 'font-size: 16px;  ' }
+    let(:wrong_format) { '  font-size: 16px;  ' }
     it 'returns true if no white space found' do
       expect(trailing_white_space?(correct_format, chars_index)).to eql(true)
     end
@@ -39,7 +39,7 @@ describe ErrorsModule do
   end
 
   describe '#ending_semicolon?' do
-    let(:wrong_format) { 'font-size: 16px' }
+    let(:wrong_format) { '  font-size: 16px' }
     it 'returns true if ending semicolon is present' do
       expect(ending_semicolon?(correct_format, chars_index)).to eql(true)
     end
@@ -50,7 +50,7 @@ describe ErrorsModule do
   end
 
   describe '#space_before_colon?' do
-    let(:wrong_format) { 'font-size : 16px;' }
+    let(:wrong_format) { '  font-size : 16px;' }
     it 'returns true if no space found before colon' do
       expect(space_before_colon?(correct_format, chars_index)).to eql(true)
     end
@@ -61,7 +61,7 @@ describe ErrorsModule do
   end
 
   describe '#space_after_colon?' do
-    let(:wrong_format) { 'font-size:16px;' }
+    let(:wrong_format) { '  font-size:16px;' }
     it 'returns true if space found after colon' do
       expect(space_after_colon?(correct_format, chars_index)).to eql(true)
     end

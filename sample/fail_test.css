@@ -27,5 +27,3 @@ article {
   font-family: Arial, Helvetica, sans-serif;
   display: flex                                   /*Missing ending semicolon*/
 }
-
-/* test */
